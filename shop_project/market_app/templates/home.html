@@ -1,0 +1,19 @@
+{% extends "./base.html"%} {% comment %} test {% endcomment %} {% load static %}
+{% comment %} test {% endcomment %} {% block title%}Home page{%endblock title%}
+{% comment %} test {% endcomment %} {% block content %}
+<section class="home">
+  <div class="home">
+    <div class="container">
+      <h1>Heading</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
+      </p>
+      <br />
+      <a href='{% url "shop_page" %}'>Shop</a>
+    </div>
+    <div class="image">
+      <img src="{% static "./images/1_29NeeIGT0BElEBNfzE_VlQ.jpg" %}" alt="" />
+    </div>
+  </div>
+</section>
+{% endblock content %}

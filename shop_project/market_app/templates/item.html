@@ -1,0 +1,12 @@
+{% extends "./base.html"%} {% comment %} test {% endcomment %} {% load static %}
+{% comment %} test {% endcomment %} {% block title%}Item page{%endblock title%}
+{% comment %} test {% endcomment %} {% block content %}
+<section class="itemPage">
+  <div class="container">
+    <h3>{{ post.title }}</h3>
+    <p><strong>{{ post.price }}</strong></p>
+    <p>{{ post.description }}</p>
+    <a href='{% url "shop_page" %}' class="back-button">Back</a>
+  </div>
+</section>
+{% endblock content %}

@@ -1,0 +1,19 @@
+{% extends "./base.html"%} {% comment %} test {% endcomment %} {% load static %}
+{% comment %} test {% endcomment %} {% block title%}Shop page{%endblock title%}
+{% comment %} test {% endcomment %} {% block content %}
+<section class="shop">
+  <div class="container">
+    <h2>Goods</h2>
+    <div class="item-cards">
+      {% for post in posts %}
+      <div class="item-card">
+        <h3>{{post.title}}</h3>
+        <p><strong>${{post.price}}</strong></p>
+        <p>{{post.description}}</p>
+        <a href='{% url "item_page" pk=post.pk %}' class="buy-button">Buy</a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock content %}
